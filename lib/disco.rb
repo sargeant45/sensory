@@ -1,3 +1,6 @@
+# disco.rb
+# this will cause your hue to rapidly turn on and off, changing colors
+
 require 'hue'
 
 # set up hue client

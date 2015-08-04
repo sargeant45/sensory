@@ -1,3 +1,6 @@
+# onoff.rb
+# this will make your hue begin to alternate between a random color and the off state
+
 require 'hue'
 
 # set up hue client

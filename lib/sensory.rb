@@ -1,3 +1,6 @@
+# sensory.rb
+# fade between random colors
+
 require 'hue'
 
 # set up hue client

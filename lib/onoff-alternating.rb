@@ -1,5 +1,5 @@
-# onoff.rb
-# this will make your hue begin to alternate between a random color and the off state
+# onoff-alternating.rb
+# this will make your hues begin to alternate between random colors and the off state
 
 require 'hue'
 
@@ -19,7 +19,7 @@ puts "\n------------------\nRest time: #{rest_time}s\nWake time: #{wake_time}s\n
 while true
   client.lights.each do |light|
     randhue = rand(Hue::Light::HUE_RANGE)
-    puts "\n------------------\nHue: #{randhue}\n------------------"
+    puts "\n------------------\nHue on '#{light.name}': #{randhue}\n------------------"
 
     light.on!
     light.set_state({:hue => randhue}, 0)

@@ -1,5 +1,5 @@
-# sensory.rb
-# fade between random colors
+# sensory-alternating.rb
+# fade between random colors, different on each bulb
 
 require 'hue'
 
@@ -20,8 +20,8 @@ while true
   client.lights.each do |light|
     # randomized attributes
     randhue = rand(Hue::Light::HUE_RANGE)
-    puts "\n------------------\nHue: #{randhue}\n------------------"
-    
+    puts "\n-----------------------------------\nHue on '#{light.name}': #{randhue}\n-----------------------------------"
+
     light.set_state({:hue => randhue}, transition_time)
   end
 

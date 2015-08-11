@@ -1,5 +1,5 @@
 # different.rb
-# this will cause your hue to rapidly turn on and off, changing colors
+# this will cause your hue to rapidly turn on and off, changing colors, with a different color on each hue
 
 require 'hue'
 
@@ -24,7 +24,7 @@ while true
 
   client.lights.each do |light|
     randomhue = rand(Hue::Light::HUE_RANGE)
-    puts "\n------------------\nHue: #{randomhue}\n------------------"
+    puts "\n------------------\nHue on '#{light.name}': #{randomhue}\n------------------"
     light.set_state({:hue => randomhue, :on => true}, 0)
   end
   sleep rest_time

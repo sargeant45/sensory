@@ -1,5 +1,5 @@
-# sensory.rb
-# fade between random colors
+# rainbow.rb
+# go through the rainbow
 
 require 'hue'
 
@@ -22,7 +22,7 @@ while true
     rhue = 0
   end
 
-  rhue += 5000
+  rhue += 5000 # this is the amount of colors the hue will go through every cycle
 
   puts "\n------------------\nHue: #{rhue}\n------------------"
 
